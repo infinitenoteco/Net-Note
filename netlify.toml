@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/api"
+  to = "https://script.google.com/macros/s/AKfycbyjFiCgkm8RuQ40zZvVXA5XvO9rrNHlMnX3CyzWI9R8ESGbXkEJd181C2lmWAnoMNbVcw/exec"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
