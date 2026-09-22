@@ -1,0 +1,6 @@
+{
+  "name": "CreatorFlow Notes",
+  "description": "A modern, minimal, premium notes application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme {
+  /*
+   * NotePad SaaS Color System
+   * Semantic color tokens are the source of truth for application UI.
+   * Legacy aliases are intentionally preserved for the current migration.
+   */
+
+  /* Base surfaces */
+  --color-primary-bg: #FFFFFF;
+  --color-secondary-bg: #F8F8F8;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F8F8F8;
+  --color-surface-hover: #F3F3F3;
+  --color-surface-selected: #F8F8F8;
+  --color-surface-disabled: #F3F3F3;
+  --color-surface-inverse: #111111;
+
+  /* Text */
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-text-disabled: #B5B5B5;
+  --color-text-inverse: #FFFFFF;
+
+  /* Icons */
+  --color-icon-primary: #333333;
+  --color-icon-secondary: #666666;
+  --color-icon-muted: #999999;
+  --color-icon-disabled: #B5B5B5;
+  --color-icon-inverse: #FFFFFF;
+
+  /* Borders */
+  --color-border: #E7E7E7;
+  --color-border-default: #E7E7E7;
+  --color-border-soft: #F3F3F3;
+  --color-border-strong: #D9D9D5;
+  --color-border-focus: #999999;
+  --color-border-selected: #D9D9D5;
+  --color-border-disabled: #EDEDED;
+
+  /* Actions */
+  --color-action-primary: #111111;
+  --color-action-primary-hover: #333333;
+  --color-action-primary-active: #000000;
+  --color-action-secondary: #F3F3F3;
+  --color-action-secondary-hover: #EAEAEA;
+  --color-action-secondary-active: #E2E2E2;
+  --color-action-disabled: #E7E7E7;
+  --color-action-on-primary: #FFFFFF;
+  --color-action-on-secondary: #111111;
+
+  /* Success */
+  --color-success: #15803D;
+  --color-success-hover: #166534;
+  --color-success-soft: #F0FDF4;
+  --color-success-border: #BBF7D0;
+  --color-success-on-solid: #FFFFFF;
+
+  /* Danger */
+  --color-danger: #DC2626;
+  --color-danger-hover: #B91C1C;
+  --color-danger-soft: #FEF2F2;
+  --color-danger-border: #FECACA;
+  --color-danger-on-solid: #FFFFFF;
+
+  /* Warning */
+  --color-warning: #B45309;
+  --color-warning-hover: #92400E;
+  --color-warning-soft: #FFFBEB;
+  --color-warning-border: #FDE68A;
+  --color-warning-on-solid: #FFFFFF;
+
+  /* Info */
+  --color-info: #2563EB;
+  --color-info-hover: #1D4ED8;
+  --color-info-soft: #EFF6FF;
+  --color-info-border: #BFDBFE;
+  --color-info-on-solid: #FFFFFF;
+
+  /* Overlays */
+  --color-overlay-soft: rgb(0 0 0 / 0.20);
+  --color-overlay-medium: rgb(0 0 0 / 0.30);
+  --color-overlay-strong: rgb(0 0 0 / 0.40);
+
+  /* Controls */
+  --color-control-accent: #111111;
+  --color-control-accent-hover: #333333;
+  --color-control-accent-disabled: #B5B5B5;
+
+  /* Editor surfaces */
+  --color-editor-code-surface: #F7F7F5;
+  --color-editor-code-border: #D9D9D5;
+  --color-editor-code-text: #242424;
+  --color-editor-code-placeholder: #9A9A96;
+
+  --color-editor-callout-surface: #F8F8F6;
+  --color-editor-callout-border: #E2E2DE;
+  --color-editor-callout-icon: #777773;
+
+  --color-editor-quote-border: #D4D4D0;
+
+  /* Legacy aliases kept so existing components do not break */
+  --color-hover-bg: #F3F3F3;
+  --color-primary-green: #111111;
+  --color-secondary-green: #333333;
+  --color-light-green: #E7E7E7;
+  --color-soft-green: #F8F8F8;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/*
+ * Dark Theme
+ *
+ * Dark theme values will be added here.
+ * The semantic token names stay exactly the same so components
+ * do not need separate dark-theme color classes.
+ */
+[data-theme="dark"] {
+  /* Base surfaces */
+  --color-primary-bg: #101112;
+  --color-secondary-bg: #141516;
+  --color-surface: #171819;
+  --color-surface-subtle: #1B1C1E;
+  --color-surface-hover: #222427;
+  --color-surface-selected: #26282B;
+  --color-surface-disabled: #1D1F21;
+  --color-surface-inverse: #F2F2F0;
+
+  /* Text */
+  --color-text-primary: #F2F2F0;
+  --color-text-secondary: #B8B8B5;
+  --color-text-muted: #858581;
+  --color-text-disabled: #5E605E;
+  --color-text-inverse: #111214;
+
+  /* Icons */
+  --color-icon-primary: #E6E6E3;
+  --color-icon-secondary: #B0B0AD;
+  --color-icon-muted: #858581;
+  --color-icon-disabled: #5E605E;
+  --color-icon-inverse: #111214;
+
+  /* Borders */
+  --color-border: #2B2D30;
+  --color-border-default: #2B2D30;
+  --color-border-soft: #222427;
+  --color-border-strong: #3A3C40;
+  --color-border-focus: #666A70;
+  --color-border-selected: #45484D;
+  --color-border-disabled: #242629;
+
+  /* Actions */
+  --color-action-primary: #F2F2F0;
+  --color-action-primary-hover: #FFFFFF;
+  --color-action-primary-active: #DCDCD9;
+  --color-action-secondary: #242629;
+  --color-action-secondary-hover: #2C2F32;
+  --color-action-secondary-active: #33363A;
+  --color-action-disabled: #242629;
+  --color-action-on-primary: #111214;
+  --color-action-on-secondary: #E6E6E3;
+
+  /* Success */
+  --color-success: #4ADE80;
+  --color-success-hover: #22C55E;
+  --color-success-soft: #13261B;
+  --color-success-border: #245C36;
+  --color-success-on-solid: #07120B;
+
+  /* Danger */
+  --color-danger: #F87171;
+  --color-danger-hover: #EF4444;
+  --color-danger-soft: #291719;
+  --color-danger-border: #633034;
+  --color-danger-on-solid: #19090A;
+
+  /* Warning */
+  --color-warning: #FBBF24;
+  --color-warning-hover: #F59E0B;
+  --color-warning-soft: #2A2414;
+  --color-warning-border: #66511E;
+  --color-warning-on-solid: #171204;
+
+  /* Info */
+  --color-info: #60A5FA;
+  --color-info-hover: #3B82F6;
+  --color-info-soft: #142235;
+  --color-info-border: #294D76;
+  --color-info-on-solid: #081321;
+
+  /* Overlays */
+  --color-overlay-soft: rgb(0 0 0 / 0.35);
+  --color-overlay-medium: rgb(0 0 0 / 0.50);
+  --color-overlay-strong: rgb(0 0 0 / 0.65);
+
+  /* Controls */
+  --color-control-accent: #F2F2F0;
+  --color-control-accent-hover: #FFFFFF;
+  --color-control-accent-disabled: #5E605E;
+
+  /* Editor surfaces */
+  --color-editor-code-surface: #141617;
+  --color-editor-code-border: #2E3033;
+  --color-editor-code-text: #E3E3E0;
+  --color-editor-code-placeholder: #777A77;
+
+  --color-editor-callout-surface: #1B1D1F;
+  --color-editor-callout-border: #303337;
+  --color-editor-callout-icon: #969994;
+
+  --color-editor-quote-border: #3A3D40;
+
+  /* Legacy aliases kept so existing components do not break */
+  --color-hover-bg: #222427;
+  --color-primary-green: #F2F2F0;
+  --color-secondary-green: #DCDCD9;
+  --color-light-green: #2B2D30;
+  --color-soft-green: #1B1C1E;
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+  display: block;
+}
+
+body {
+  @apply bg-primary-bg text-text-primary font-sans antialiased selection:bg-black selection:text-white;
+}
+
+@keyframes toast-progress {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
