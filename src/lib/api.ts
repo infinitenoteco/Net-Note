@@ -1,7 +1,6 @@
 import axios from "axios";
 
-export const API_BASE_URL =
-  "https://script.google.com/macros/s/AKfycbyjFiCgkm8RuQ40zZvVXA5XvO9rrNHlMnX3CyzWI9R8ESGbXkEJd181C2lmWAnoMNbVcw/exec";
+export const API_BASE_URL = "/api";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
